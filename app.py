@@ -1,12 +1,26 @@
+import subprocess
+
+def install_requirements():
+    subprocess.call(['pip', 'install', '-r', 'requirements2.txt'])
+
+if __name__ == "__main__":
+    install_requirements()
+
+
 import os
 from flask import Flask, render_template, request
 import cv2
+
+
 import torch
 from basicsr.archs.srvgg_arch import SRVGGNetCompact
 from gfpgan.utils import GFPGANer
 from realesrgan.utils import RealESRGANer
 
 app = Flask(__name__)
+
+
+
 
 # Set the upload folder and allowed extensions
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
