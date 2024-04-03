@@ -3,8 +3,7 @@ import subprocess
 def install_requirements():
     subprocess.call(['pip', 'install', '-r', 'requirements2.txt'])
 
-if __name__ == "__main__":
-    install_requirements()
+install_requirements()
 
 
 import os
