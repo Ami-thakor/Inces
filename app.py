@@ -3,7 +3,7 @@ import subprocess
 def install_requirements():
     subprocess.call(['pip', 'install', '-r', 'requirements2.txt'])
 
-install_requirements()
+# install_requirements()
 
 
 import os
