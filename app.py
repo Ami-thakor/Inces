@@ -5,6 +5,24 @@ def install_requirements():
 
 # install_requirements()
 
+requirs = """torch>=1.7
+basicsr>=1.4.2
+facexlib>=0.2.5
+gfpgan>=1.3.7
+realesrgan>=0.2.5
+numpy
+opencv-python
+torchvision
+scipy
+tqdm
+lmdb
+pyyaml
+yapf"""
+
+pips  = requirs.splitlines()
+
+for req in pips:
+  subprocess.call(['pip', 'install', req])
 
 import os
 from flask import Flask, render_template, request
